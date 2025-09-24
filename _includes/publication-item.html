@@ -1,0 +1,39 @@
+{% assign pub = include.publication %}
+<div class="publication-item">
+  <div class="publication-image">
+    <div class="venue-badge">{{ pub.venue }}</div>
+    <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }}" loading="lazy">
+  </div>
+  
+  <div class="publication-content">
+    <h3 class="publication-title">
+      <a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+    </h3>
+    
+    <div class="publication-meta">
+      <div class="authors">{{ pub.authors }}</div>
+      {% if pub.venue_info %}
+        <div class="venue-info">{{ pub.venue_info }}</div>
+      {% endif %}
+      {% if pub.pdf %}
+        <div class="publication-links">
+          <a href="{{ pub.pdf | relative_url }}" class="btn btn--primary btn--small" target="_blank">
+            <i class="fas fa-file-pdf"></i> PDF
+          </a>
+        </div>
+      {% endif %}
+    </div>
+    
+    <div class="publication-description">
+      <p>{{ pub.description }}</p>
+      
+      {% if pub.highlights %}
+        <ul class="publication-highlights">
+          {% for highlight in pub.highlights %}
+            <li>{{ highlight }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+</div>

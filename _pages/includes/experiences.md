@@ -10,8 +10,4 @@ Bachelor of Science, Majored in Media Technology, March 2017-Feb 2023
 > Military Service, September 2018 – May 2020  
 > Academic hiatus due to military service
 
----
-
-## 📄 CV
-
-[Download my CV (PDF)](images/pdfs/CV_joonhyuk.pdf)
+[CV (PDF)](images/pdfs/CV_joonhyuk.pdf)
