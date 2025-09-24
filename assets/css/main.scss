@@ -107,3 +107,88 @@ h1:before, .anchor:before {
     background-color: #00369f;
     font-size: .8em;
 }
+
+/* Enhanced Navigation Styles */
+.masthead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-bottom: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    
+    &__inner-wrap {
+        padding: 1rem 0.5rem;
+    }
+}
+
+.greedy-nav {
+    background: transparent;
+    
+    a {
+        color: white;
+        font-weight: 500;
+        font-size: 1rem;
+        margin: 0 1.5rem;
+        padding: 0.75rem 0;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-1px);
+        }
+        
+        &:before {
+            display: none; // Remove the underline effect
+        }
+    }
+    
+    .visible-links li:first-child a {
+        font-weight: 700;
+        font-size: 1.1rem;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 0.75rem 1.5rem;
+        border-radius: 25px;
+        
+        &:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+    }
+    
+    button {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 6px;
+        
+        &:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    }
+    
+    .hidden-links {
+        background: white;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        margin-top: 0.5rem;
+        
+        a {
+            color: #333;
+            margin: 0;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 0.25rem;
+            
+            &:hover {
+                background: #f8f9fa;
+                color: #667eea;
+            }
+        }
+        
+        &:before {
+            border-color: rgba(255,255,255,0.2) transparent;
+        }
+        
+        &:after {
+            border-color: white transparent;
+        }
+    }
+}
