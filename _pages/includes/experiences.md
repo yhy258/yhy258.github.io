@@ -1,7 +1,7 @@
 # 📚 Education
 
 - **Hanyang University**, Seoul, Republic of Korea  
-Master of Science, Department of Artificial Intelligence, Aug 2025  
+Master of Science, Department of Artificial Intelligence, March 2023-Aug 2025  
 Cumulative GPA: 3.83/4.0  
 Relevant Coursework: Optimization Theory (A), Advanced Machine Learning Theory (A), Introduction to Random Processes (A)  
 
