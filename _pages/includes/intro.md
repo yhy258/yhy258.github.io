@@ -1,3 +1,5 @@
+# 😊 Introduction
+
 Applying visual generative models to solve real-world problems.  
 
 **Research Interests**
