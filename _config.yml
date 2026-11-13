@@ -8,6 +8,7 @@
 # Site Settings
 title                    : "Joonhyuk Seo"
 description              : "Applying visual generative models to solve real-world problems."
+url                      : "https://yhy258.github.io"
 repository               : "yhy258/yhy258.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -126,6 +127,13 @@ defaults:
     values:
       layout: default
       author_profile: true
+  # _posts: written in Markdown, published at /blog/<title>/
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /blog/:title/
 
 
 # Sass/SCSS
@@ -136,7 +144,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-timezone: Asia/Shanghai # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Seoul # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins

@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: ""
+layout: home
 excerpt: ""
 author_profile: true
 redirect_from: 
@@ -20,3 +21,5 @@ redirect_from:
 {% include_relative includes/experiences.md %}
 
 {% include_relative includes/publication.md %}
+
+{% include_relative includes/blog.md %}

@@ -1,0 +1,47 @@
+---
+layout: default
+body_class: home
+---
+
+{% assign author = site.author %}
+<header class="title-band">
+  <div class="col title-band__profile">
+    {% if author.avatar %}
+      <img class="avatar" src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" width="96" height="96">
+    {% endif %}
+    <div>
+      <h1>{{ author.name }}</h1>
+      <p class="lede">{{ site.description }}</p>
+    </div>
+  </div>
+</header>
+
+<div class="byline">
+  <div class="col byline-grid">
+    {% if author.location %}
+    <div>
+      <h3>Based in</h3>
+      <p>{{ author.location }}</p>
+    </div>
+    {% endif %}
+    {% if author.email %}
+    <div>
+      <h3>Contact</h3>
+      <p><a href="mailto:{{ author.email }}">{{ author.email }}</a></p>
+    </div>
+    {% endif %}
+    <div>
+      <h3>Elsewhere</h3>
+      <p>
+        {% if author.googlescholar %}<a href="{{ author.googlescholar }}">Google Scholar</a>{% endif %}
+        {% if author.github %}<span class="sep">·</span> <a href="https://github.com/{{ author.github }}">GitHub</a>{% endif %}
+        {% if author.linkedin %}<span class="sep">·</span> <a href="https://www.linkedin.com/in/{{ author.linkedin }}">LinkedIn</a>{% endif %}
+        {% if author.twitter %}<span class="sep">·</span> <a href="https://x.com/{{ author.twitter }}">X</a>{% endif %}
+      </p>
+    </div>
+  </div>
+</div>
+
+<main class="col prose">
+  {{ content }}
+</main>

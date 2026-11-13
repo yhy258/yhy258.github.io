@@ -1,0 +1,46 @@
+---
+layout: default
+body_class: post
+---
+
+{% assign words = content | strip_html | number_of_words %}
+{% assign minutes = words | divided_by: 220 | at_least: 1 %}
+<div class="progress" aria-hidden="true"><div class="progress__bar"></div></div>
+
+<header class="title-band">
+  <div class="col">
+    {% if page.kicker %}<p class="kicker">{{ page.kicker }}</p>{% endif %}
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
+  </div>
+</header>
+
+<div class="byline">
+  <div class="col byline-grid">
+    <div>
+      <h3>Author</h3>
+      <p><a href="{{ '/' | relative_url }}">{{ page.author | default: site.author.name }}</a></p>
+    </div>
+    <div>
+      <h3>Published</h3>
+      <p><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+    </div>
+    <div>
+      <h3>Reading time</h3>
+      <p>{{ minutes }} min{% if page.tags.size > 0 %} <span class="sep">·</span> {{ page.tags | join: ", " }}{% endif %}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Filled in by assets/js/site.js from the post's h2/h3; shown beside the text on wide screens -->
+<nav class="toc" aria-label="Contents" hidden></nav>
+
+<main class="col prose">
+  {{ content }}
+
+  <p class="post-nav">
+    {% if page.previous %}<a class="post-nav__prev" href="{{ page.previous.url | relative_url }}">← {{ page.previous.title }}</a>{% endif %}
+    <a class="post-nav__all" href="{{ '/blog/' | relative_url }}">All posts</a>
+    {% if page.next %}<a class="post-nav__next" href="{{ page.next.url | relative_url }}">{{ page.next.title }} →</a>{% endif %}
+  </p>
+</main>

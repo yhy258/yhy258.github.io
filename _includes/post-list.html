@@ -1,0 +1,10 @@
+{% comment %} A list of posts. include.limit: how many to show (all when not given). {% endcomment %}
+<ul class="post-list">
+  {% for post in site.posts limit: include.limit %}
+    <li class="post-list__item" data-tags="{{ post.tags | join: '|' | escape }}">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+      <a class="post-list__title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+    </li>
+  {% endfor %}
+</ul>
